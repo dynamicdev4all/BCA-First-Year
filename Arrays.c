@@ -33,7 +33,7 @@ void createArray()
         for (int j = 0; j < y; j++)
         {
             printf("%d", arr[i][j]);
-            if (j == 2)
+            if (j == y-1)
             {
                 continue;
             }
@@ -42,13 +42,39 @@ void createArray()
         printf("]");
         printf("\n");
     }
+
+    int updateX;
+    int updateY;
+    int newVal;
+    printf("\n Please enter the index value you want to update \n");
+    scanf ("%d %d", &updateX, &updateY);
+    printf("Please enter the new value");
+    scanf("%d", &newVal);
+    arr[updateX][updateY] = newVal;
+
+
+     printf("The Updated data is \n");
+    for (int i = 0; i < x; i++)
+    {
+        printf("[");
+        for (int j = 0; j < y; j++)
+        {
+            printf("%d", arr[i][j]);
+            if (j == y-1)
+            {
+                continue;
+            }
+            printf(" , ");
+        }
+        printf("]");
+        printf("\n");
+    }
+
 }
+
 void readArray(int a[])
 {
-    for (int i = 0; i < 5; i++)
-    {
-        printf("%d \n", a[i]);
-    }
+
 }
 void updateArray()
 {
